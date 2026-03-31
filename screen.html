@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Laura 2 Community Portal Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "on-secondary-container": "#506858",
+                "primary-container": "#0b5233",
+                "on-surface": "#191c1a",
+                "tertiary-fixed-dim": "#95d5a7",
+                "on-error-container": "#93000a",
+                "background": "#f8faf5",
+                "tertiary": "#00391d",
+                "surface-container-lowest": "#ffffff",
+                "on-primary-fixed": "#002111",
+                "secondary": "#4c6454",
+                "on-secondary-fixed": "#092013",
+                "surface-tint": "#2a6a49",
+                "error-container": "#ffdad6",
+                "outline": "#707972",
+                "secondary-container": "#cbe6d2",
+                "on-primary": "#ffffff",
+                "surface-container-low": "#f2f4ef",
+                "secondary-fixed": "#cee9d5",
+                "on-tertiary-container": "#85c497",
+                "on-primary-fixed-variant": "#0a5132",
+                "outline-variant": "#bfc9c0",
+                "tertiary-fixed": "#b0f1c2",
+                "primary-fixed-dim": "#93d5ac",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#d8dbd6",
+                "surface-container": "#ecefea",
+                "on-tertiary-fixed": "#00210e",
+                "on-error": "#ffffff",
+                "on-surface-variant": "#404942",
+                "inverse-surface": "#2e312e",
+                "error": "#ba1a1a",
+                "primary": "#003921",
+                "on-background": "#191c1a",
+                "surface-variant": "#e1e3de",
+                "tertiary-container": "#11522f",
+                "inverse-primary": "#93d5ac",
+                "primary-fixed": "#aef1c7",
+                "on-secondary-fixed-variant": "#344c3d",
+                "surface-container-high": "#e6e9e4",
+                "surface": "#f8faf5",
+                "surface-container-highest": "#e1e3de",
+                "surface-bright": "#f8faf5",
+                "on-primary-container": "#83c49c",
+                "on-tertiary": "#ffffff",
+                "inverse-on-surface": "#eff1ec",
+                "secondary-fixed-dim": "#b2cdb9",
+                "on-tertiary-fixed-variant": "#10512e"
+              },
+              fontFamily: {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .editorial-shadow {
+            box-shadow: 0px 12px 32px rgba(25, 28, 26, 0.06);
+        }
+        .bento-card {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-[0px_12px_32px_rgba(25,28,26,0.06)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-xl font-black text-emerald-900 flex items-center gap-3 font-headline">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+<img alt="Laura 2 Neighborhood Association Logo" class="w-full h-full object-contain rounded-full bg-white" src="https://lh3.googleusercontent.com/aida/ADBb0ugP1dmOe2O_VHOutqMbiMYqO-iIJdPFRp8HntLmsGQp07YA_o_hDzdkY2HuPWyNbrdctrREP9wyQbRjhPSYe3WhHQpIo6KjngMDzxQjmwBkqQL1C1JRtZHr_3uR9xICn8EXIb_efHW_j6FupWDAi2KNr6fMQqGdmTWdbmE7PAmbikRXKP_ljDRffiBMOydnpBUthPUGUJaVWe-MwbGfFheY8g7DY9GxzD7vufj4-KFTSoz6oWSw5TViVet2rXh2UXV6i23M6Rfwaw"/>
+</div>
+<span>Laura 2 Community Portal Home</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-emerald-700 font-extrabold border-b-2 border-emerald-700 pb-1 font-headline tracking-tight" href="#">News</a>
+<a class="text-emerald-900/70 font-medium hover:text-emerald-900 transition-colors duration-300 font-headline tracking-tight" href="#">Calendar</a>
+<a class="text-emerald-900/70 font-medium hover:text-emerald-900 transition-colors duration-300 font-headline tracking-tight" href="#">Events</a>
+<a class="text-emerald-900/70 font-medium hover:text-emerald-900 transition-colors duration-300 font-headline tracking-tight" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2 rounded-full bg-primary text-on-primary font-bold hover:bg-primary-container transition-all active:scale-95 duration-200">
+                    Login
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-[870px] w-full flex items-center overflow-hidden pt-16">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="lush residential street in Quezon City with mature trees, clean sidewalks, and soft morning sunlight filtering through leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs3FWUYqUu200XI2YpC4Vkb8macgTTz8rSdKXeS0kbzEKM8hJj7A_XeDr6A_7SY_RKpHj4w505b9jVUUGtFz9hFFb9yYVBk4cUHa73-d7kJhFpygDlPZenfazFPyWAg-Y2XkxhFXHJ1rPD66IKOru_GjJUHJdT_T3qDoWhSBx6XpXCoNovZy1PRzFyE3IfnPC6LyDuBWjTOsHGJ8ty8l-zq2K96H-9HomXHwisGRjVaCAG9IfYfOCId_vb0tKDW0kiH2VMbE20Az04"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-screen-2xl mx-auto px-8 w-full">
+<div class="max-w-2xl">
+<h1 class="text-white font-headline text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1]">
+                    Welcome to the Laura 2 Community Hub
+                </h1>
+<p class="text-emerald-50/90 text-lg md:text-xl font-medium mb-10 leading-relaxed">
+                    Your central source for news, sports, and civic updates. Explore our active neighborhood and stay connected with your neighbors.
+                </p>
+<button class="bg-primary hover:bg-primary-container text-white px-10 py-4 rounded-full text-lg font-bold transition-all flex items-center gap-3 shadow-xl">
+                    Get Started
+                    <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Bento Grid Section -->
+<section class="py-24 px-8 max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Basketball Module -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-xl p-10 editorial-shadow bento-card relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-64 h-64 -mr-16 -mt-16 opacity-10 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-[12rem] text-primary" data-icon="sports_basketball">sports_basketball</span>
+</div>
+<div class="relative z-10 h-full flex flex-col justify-between">
+<div>
+<span class="inline-block px-4 py-1 bg-primary-fixed text-on-primary-fixed rounded-full text-xs font-bold tracking-widest uppercase mb-6">Upcoming Event</span>
+<h2 class="text-4xl font-headline font-extrabold text-primary mb-4">Upcoming Basketball Tournament: Join the Fun!</h2>
+<p class="text-on-surface-variant text-lg max-w-md mb-8">Grab your sneakers and head to the court. July 22nd marks our annual neighborhood championship.</p>
+</div>
+<div>
+<div class="flex items-center gap-4 mb-8">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-white bg-secondary-container"></div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-primary-fixed"></div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-tertiary-fixed"></div>
+</div>
+<span class="text-sm font-semibold text-on-surface-variant">+42 Neighbors Registered</span>
+</div>
+<button class="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-primary-container transition-colors">Register Now</button>
+</div>
+</div>
+</div>
+<!-- Calendar Module -->
+<div class="md:col-span-4 bg-primary text-white rounded-xl p-8 editorial-shadow bento-card">
+<div class="flex justify-between items-center mb-8">
+<h3 class="text-2xl font-headline font-bold">July Calendar</h3>
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+</div>
+<div class="grid grid-cols-7 gap-2 mb-8 text-center text-xs font-bold opacity-60">
+<div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center text-sm">
+<div class="p-2 opacity-30">28</div><div class="p-2 opacity-30">29</div><div class="p-2 opacity-30">30</div>
+<div class="p-2">1</div><div class="p-2">2</div><div class="p-2">3</div><div class="p-2">4</div>
+<div class="p-2">5</div><div class="p-2">6</div><div class="p-2">7</div><div class="p-2">8</div>
+<div class="p-2">9</div><div class="p-2">10</div><div class="p-2">11</div><div class="p-2">12</div>
+<div class="p-2">13</div><div class="p-2">14</div>
+<div class="p-2 bg-primary-container rounded-full ring-2 ring-primary-fixed font-bold text-primary-fixed">15</div>
+<div class="p-2">16</div><div class="p-2">17</div><div class="p-2">18</div><div class="p-2">19</div><div class="p-2">20</div><div class="p-2">21</div>
+<div class="p-2 bg-primary-container rounded-full ring-2 ring-primary-fixed font-bold text-primary-fixed">22</div>
+<div class="p-2">23</div><div class="p-2">24</div><div class="p-2">25</div><div class="p-2">26</div><div class="p-2">27</div><div class="p-2">28</div>
+<div class="p-2 bg-primary-container rounded-full ring-2 ring-primary-fixed font-bold text-primary-fixed">29</div>
+<div class="p-2">30</div><div class="p-2">31</div>
+</div>
+<div class="mt-8 space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-primary-fixed"></div>
+<span class="text-xs font-medium opacity-90">15th: Soccer Match</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-primary-fixed"></div>
+<span class="text-xs font-medium opacity-90">22nd: Basketball Tournament</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-primary-fixed"></div>
+<span class="text-xs font-medium opacity-90">29th: Tennis Mixer</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Ongoing Tournament Section -->
+<section class="py-24 px-8 max-w-screen-2xl mx-auto">
+<div class="flex flex-col gap-2 mb-12">
+<span class="text-primary font-label text-xs font-bold tracking-[0.1em] uppercase">Community Athletics</span>
+<h2 class="text-4xl md:text-5xl font-headline font-extrabold text-primary tracking-tight">Ongoing Tournament</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Tournament Standings Table -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl editorial-shadow overflow-hidden border-t-4 border-primary-fixed">
+<div class="p-8 pb-4">
+<h3 class="text-2xl font-headline font-bold text-primary tracking-tight">Tournament Standings</h3>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-primary text-on-primary font-headline">
+<th class="py-5 px-8 font-semibold tracking-wide text-sm uppercase">Team Name</th>
+<th class="py-5 px-6 font-semibold tracking-wide text-sm uppercase text-center">Wins</th>
+<th class="py-5 px-6 font-semibold tracking-wide text-sm uppercase text-center">Losses</th>
+<th class="py-5 px-8 font-semibold tracking-wide text-sm uppercase text-right">Points</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-8 font-bold text-emerald-900">Greenwood Raptors</td>
+<td class="py-5 px-6 text-center font-medium">12</td>
+<td class="py-5 px-6 text-center font-medium">2</td>
+<td class="py-5 px-8 text-right font-black text-primary text-lg">36</td>
+</tr>
+<tr class="bg-surface-container-low/30 hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-8 font-bold text-emerald-900">Arbor Heights Tigers</td>
+<td class="py-5 px-6 text-center font-medium">10</td>
+<td class="py-5 px-6 text-center font-medium">4</td>
+<td class="py-5 px-8 text-right font-black text-primary text-lg">30</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-8 font-bold text-emerald-900">Lakeview Falcons</td>
+<td class="py-5 px-6 text-center font-medium">9</td>
+<td class="py-5 px-6 text-center font-medium">5</td>
+<td class="py-5 px-8 text-right font-black text-primary text-lg">27</td>
+</tr>
+<tr class="bg-surface-container-low/30 hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-8 font-bold text-emerald-900">Summit Oaks Wolves</td>
+<td class="py-5 px-6 text-center font-medium">7</td>
+<td class="py-5 px-6 text-center font-medium">7</td>
+<td class="py-5 px-8 text-right font-black text-primary text-lg">21</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-6 text-center border-t border-surface-container">
+<button class="text-primary font-bold text-sm hover:underline">View Full Leaderboard</button>
+</div>
+</div>
+<!-- Side Column: Player Spotlight & Schedule -->
+<div class="lg:col-span-5 flex flex-col gap-8">
+<!-- Player of the Game Card -->
+<article class="relative bg-primary text-on-primary rounded-xl overflow-hidden editorial-shadow group h-[380px]">
+<img alt="Marcus Jordan Spotlight" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSmPaD6NXqLdHJayg4o2mXLt7hP8O0rRhxlBO784RiQsPy02ieKzTPAbUCz8Kf2daXcLWFGqNRbmVmXnXhF8rzUhweC0pFwjtHCgkSdK2C1r1iX0vXMVJjEkhL2skAM8xM1IWOS-Q_RQm9MB1pHGHzfUBb4WZYdyLdjLwbzuYYKsiX2QgG8xudGZLOO_WGAqLd5gXPQcqCt4KL6NypIUW2CnDi3POx4QmDo28iXXscJKQUf2cFy6bk2zA3PVNDTJWHmR2KNjgFVsZu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="mb-4 inline-block bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full text-[10px] font-bold tracking-[0.15em] uppercase">Player of the Game</div>
+<h4 class="text-3xl font-headline font-black tracking-tight leading-tight mb-1">Marcus "Tree" Jordan</h4>
+<p class="text-primary-fixed font-headline font-semibold mb-6">Arbor Heights Tigers — Guard</p>
+<div class="grid grid-cols-2 gap-4 border-t border-white/20 pt-6">
+<div>
+<span class="block text-[10px] text-white/60 font-label uppercase tracking-widest mb-1">Points</span>
+<span class="text-2xl font-black">28</span>
+</div>
+<div>
+<span class="block text-[10px] text-white/60 font-label uppercase tracking-widest mb-1">Rebounds</span>
+<span class="text-2xl font-black">12</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Today's Schedule -->
+<section class="bg-surface-container rounded-xl p-8 editorial-shadow">
+<div class="flex justify-between items-center mb-6">
+<h4 class="text-xl font-headline font-bold text-primary tracking-tight">Today's Games</h4>
+<span class="bg-white/50 px-3 py-1 rounded-full text-[10px] font-bold text-emerald-900 tracking-wider">JUL 22</span>
+</div>
+<div class="space-y-4">
+<!-- Matchup 1 -->
+<div class="bg-surface-container-lowest p-5 rounded-lg flex items-center justify-between border border-surface-variant/20 hover:border-primary/30 transition-all">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3">
+<span class="font-headline font-extrabold text-emerald-950">Raptors</span>
+<span class="text-[10px] text-on-surface-variant font-bold uppercase">vs</span>
+<span class="font-headline font-extrabold text-emerald-950">Tigers</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-xs">schedule</span>
+                                    6:00 PM
+                                </div>
+</div>
+<div class="text-right">
+<span class="text-[9px] font-label font-bold uppercase tracking-widest text-primary/60 block">Location</span>
+<span class="text-sm font-headline font-bold text-primary">Main Court</span>
+</div>
+</div>
+<!-- Matchup 2 -->
+<div class="bg-surface-container-lowest p-5 rounded-lg flex items-center justify-between border border-surface-variant/20 hover:border-primary/30 transition-all">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3">
+<span class="font-headline font-extrabold text-emerald-950">Falcons</span>
+<span class="text-[10px] text-on-surface-variant font-bold uppercase">vs</span>
+<span class="font-headline font-extrabold text-emerald-950">Wolves</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-xs">schedule</span>
+                                    7:45 PM
+                                </div>
+</div>
+<div class="text-right">
+<span class="text-[9px] font-label font-bold uppercase tracking-widest text-primary/60 block">Location</span>
+<span class="text-sm font-headline font-bold text-primary">West Court</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</section>
+<!-- Community News Section -->
+<section class="bg-surface-container-low py-24 px-8">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-4 mb-16">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="leafy_green">energy_savings_leaf</span>
+<h2 class="text-4xl font-headline font-extrabold text-primary">Community News</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden editorial-shadow group">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="modern playground equipment with colorful slides and wood chips under bright sunny sky in a park setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAyNAU8RPgyGn9oVZH0zm4m11e1PkBP9D_1kO5HNv7oPdc55eaTlHsJeEm14hQNMJyN9A869vzEnOfy6MMuz61lnlJVuQJyreaySeyHxnawQl87gyT-pAd3L95G5uag7S29yLdIY0h5CvbOGKGbNeSxuq9gLj7gYkFsX8I6QsQs7RQu89LwEDtDxGTnHbyXFT5wbY6PJD6MGSaf4LAoaeN1RyPU-OUY8qFpBYPX1oFX8KZhf7tVPyBadl2L6xyT56uY3KX0WTt33I3"/>
+</div>
+<div class="p-8">
+<span class="text-xs font-bold text-on-surface-variant/60 tracking-widest uppercase mb-2 block">Infrastructure</span>
+<h3 class="text-2xl font-headline font-bold text-primary mb-4 leading-tight">New Playground Equipment Installed</h3>
+<p class="text-on-surface-variant mb-6">Phase 2 of the park revitalization project is complete with all new sustainable wooden structures.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#">
+                            Read More <span class="material-symbols-outlined text-sm" data-icon="arrow_right_alt">arrow_right_alt</span>
+</a>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden editorial-shadow group">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="a multi-generational family having a picnic on a green lawn with a checkered blanket and picnic basket" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ4M_DbaStbCCZnTSOK2eid8T7WOQUOdomIykG_jzzZmuvHVCDIbrudDd64GtDIIFKb-dzKW6bupQ_-lSZjPm8BXX5DPddG3_WTbPcql3jPiSAesaHt9y2yTBa6G-9I3r6a9Y1Vki9oeQwe_eremHpAhMhSTstle-LuSKmxWYp3ojU03m3pW6S3FMhsebpDW_zyuLwJedEfF55g11I-EUUqWKXt16FtckDY-nsXgTlnyz1JaW52dTrpNkz0mUmkx4pYpwJETiYbC40"/>
+</div>
+<div class="p-8 border-t-4 border-primary-fixed">
+<span class="text-xs font-bold text-on-surface-variant/60 tracking-widest uppercase mb-2 block">Events</span>
+<h3 class="text-2xl font-headline font-bold text-primary mb-4 leading-tight">Annual Summer Picnic Details</h3>
+<p class="text-on-surface-variant mb-6">Join us next Saturday for food, music, and neighbors. Bring your favorite dish to share!</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#">
+                            Read More <span class="material-symbols-outlined text-sm" data-icon="arrow_right_alt">arrow_right_alt</span>
+</a>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden editorial-shadow group">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="diverse group of volunteers wearing matching green t-shirts smiling while working in a neighborhood garden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHtPdV3JhQ4jJoCpvPilw0-O1rTV5p3-BL9CjBYHkrMuL-tIMpy8vv6zCnsxU4n51ZcxsSpC1956oU-ZB211YJi6EkdjGHot6VAHyTvB2ts3qStFJxRHHVH9q563Il0ImseHOycfJkqVJfGwPbNmWtAEMq6UVKAx-e3WRxJNY7-woUTlOBobiRd7WJAwWAOZzmyDFNSyvXKeacE76yNRsfEV3dxBt1htOQj6WVGVWnBFuZthWXOERjOr7oMzGasKhpGyqokFi70Qd5"/>
+</div>
+<div class="p-8">
+<span class="text-xs font-bold text-on-surface-variant/60 tracking-widest uppercase mb-2 block">Civic</span>
+<h3 class="text-2xl font-headline font-bold text-primary mb-4 leading-tight">Volunteer Cleanup Day</h3>
+<p class="text-on-surface-variant mb-6">Let's keep Laura 2 beautiful. Sign up for our monthly street-wide cleanup initiative.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#">
+                            Read More <span class="material-symbols-outlined text-sm" data-icon="arrow_right_alt">arrow_right_alt</span>
+</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Map & Involvement Section -->
+<section class="py-24 px-8 max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<!-- Map Module -->
+<div class="relative">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-primary-fixed/20 rounded-full blur-3xl -z-10"></div>
+<div class="bg-white p-4 rounded-xl editorial-shadow overflow-hidden">
+<div class="h-[400px] bg-surface-container rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale opacity-80" data-alt="stylized vector map of a residential neighborhood with green spaces, streets, and community centers highlighted" data-location="Quezon City" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCDCsmgQpaTgZTkwynLMGESuo9OpbTZRceCGVNlK9MPYoSafwvzhsIbTVMSWrjxmVNy9QuKDXX8ONLgFgHV_M1RF2AnMgDGuNIH39ohE3SclgMrOhTT1xoZ9ERX7h-CRqDxHn2NUyHS0aTQrom2uBEBpLL4KcHyxKr9xasqMe2FCE-ngbSs-Jzq9Sr79ap81gQY8vglCWIyBSBqcow_JWiVinRSe1JZX3c2eC2D_VAShDlhEi1wcTze2zFQ1QneTPlSEISKdgtKDA6"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-primary text-white p-3 rounded-full animate-bounce shadow-2xl">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+</div>
+</div>
+<div class="pt-6 px-2">
+<h3 class="text-xl font-headline font-bold text-primary">Community Map</h3>
+<p class="text-sm text-on-surface-variant">The heart of Quezon City's greenest enclave.</p>
+</div>
+</div>
+</div>
+<!-- Get Involved Module -->
+<div class="lg:pl-12">
+<h2 class="text-4xl md:text-5xl font-headline font-extrabold text-primary mb-8 leading-tight">Your Neighborhood, Your Voice</h2>
+<p class="text-lg text-on-surface-variant mb-12 leading-relaxed">
+                    Laura 2 thrives because of active resident participation. Whether you're interested in policy, events, or beautification, there's a place for you.
+                </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<button class="bg-primary text-white px-8 py-5 rounded-full font-bold flex items-center justify-center gap-3 hover:bg-primary-container transition-all hover:translate-x-1">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+                        Join a Committee
+                    </button>
+<button class="bg-primary text-white px-8 py-5 rounded-full font-bold flex items-center justify-center gap-3 hover:bg-primary-container transition-all hover:translate-x-1">
+<span class="material-symbols-outlined" data-icon="volunteer_activism">volunteer_activism</span>
+                        Volunteer Signup
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-emerald-900 dark:bg-emerald-950 w-full py-12 px-8">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-emerald-50/60 font-['Inter'] text-sm tracking-wide uppercase font-semibold">
+                © 2024 Laura 2 Neighborhood Association. All rights reserved.
+            </div>
+<div class="flex gap-10">
+<a class="text-emerald-100/80 hover:text-white transition-opacity font-['Inter'] text-sm tracking-wide uppercase font-semibold" href="#">Privacy Policy</a>
+<a class="text-emerald-100/80 hover:text-white transition-opacity font-['Inter'] text-sm tracking-wide uppercase font-semibold" href="#">Terms of Service</a>
+<a class="text-emerald-100/80 hover:text-white transition-opacity font-['Inter'] text-sm tracking-wide uppercase font-semibold" href="#">Contact</a>
+</div>
+</div>
+</footer>
+<!-- FAB -->
+<div class="fixed bottom-8 right-8 z-50 flex items-center justify-end">
+<button class="flex items-center gap-3 px-6 py-4 bg-emerald-700 text-white rounded-full font-bold shadow-2xl shadow-emerald-900/20 hover:bg-emerald-800 scale-100 hover:scale-105 active:scale-90 transition-all group">
+<span class="material-symbols-outlined group-hover:rotate-12 transition-transform" data-icon="campaign">campaign</span>
+<span>Report a Concern</span>
+</button>
+</div>
+</body></html>
