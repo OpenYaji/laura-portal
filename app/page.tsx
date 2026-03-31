@@ -65,7 +65,7 @@ export default function Page() {
             {/* Hero Section */}
             <section className="relative h-[870px] w-full flex items-center overflow-hidden pt-16">
                 <div className="absolute inset-0 z-0">
-                    <img className="w-full h-full object-cover" data-alt="lush residential street in Quezon City with mature trees, clean sidewalks, and soft morning sunlight filtering through leaves" src="/images/hero.jpg" />
+                    <img className="w-full h-full object-cover" data-alt="lush residential street in Quezon City with mature trees, clean sidewalks, and soft morning sunlight filtering through leaves" src="/images/tanduay.png" />
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent"></div>
                 </div>
                 <div className="relative z-10 max-w-screen-2xl mx-auto px-8 w-full">
