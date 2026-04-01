@@ -10,7 +10,12 @@ const t_roster = [{ id: 1, name: 'TBA', number: '00', pos: '-' }];
 
 const TOURNAMENT_DATA = {
     Midget: [
-        { id: "m1", name: "Sige Po", wins: 4, losses: 0, points: 8, roster: t_roster, games: t_games },
+        { id: "m1", name: "Sige Po", wins: 4, losses: 0, points: 8, roster: [
+            { id: 1, name: "Angelito \"Tisoy\" Artiaga", number: "2", pos: "-" },
+            { id: 2, name: "Alexander \"000000\" Fedelson", number: "02", pos: "-" },
+            { id: 3, name: "HarryJake \"Ry\" Santos", number: "08", pos: "-" },
+            { id: 4, name: "Alfred \"Paopao\" Sabar", number: "999", pos: "-" }
+        ], games: t_games },
         { id: "m2", name: "Aggressive", wins: 3, losses: 1, points: 7, roster: t_roster, games: t_games },
         { id: "m3", name: "Samonte", wins: 3, losses: 1, points: 7, roster: t_roster, games: t_games },
         { id: "m4", name: "Don Matias", wins: 2, losses: 2, points: 6, roster: t_roster, games: t_games },
@@ -39,7 +44,14 @@ const TOURNAMENT_DATA = {
     'Kids B': [
         { id: "kb1", name: "Denim T.", wins: 4, losses: 0, points: 8, roster: t_roster, games: t_games },
         { id: "kb2", name: "R Hoops", wins: 3, losses: 2, points: 8, roster: t_roster, games: t_games },
-        { id: "kb3", name: "Kupas Nga", wins: 3, losses: 2, points: 8, roster: t_roster, games: t_games },
+        { id: "kb3", name: "Kupas Nga", wins: 3, losses: 2, points: 8, roster: [
+            { id: 1, name: "Boyboy", number: "67", pos: "-" },
+            { id: 2, name: "Lawrence", number: "28", pos: "-" },
+            { id: 3, name: "Shamong", number: "13", pos: "-" },
+            { id: 4, name: "Rolando", number: "22", pos: "-" },
+            { id: 5, name: "Verald", number: "30", pos: "-" },
+            { id: 6, name: "Justine", number: "0", pos: "-" }
+        ], games: t_games },
         { id: "kb4", name: "Laura", wins: 2, losses: 1, points: 5, roster: t_roster, games: t_games },
         { id: "kb5", name: "Bethel", wins: 1, losses: 3, points: 5, roster: t_roster, games: t_games },
         { id: "kb6", name: "RND", wins: 0, losses: 5, points: 5, roster: t_roster, games: t_games },
