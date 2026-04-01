@@ -45,6 +45,32 @@ export default function Page() {
     const [currentPotgIndex, setCurrentPotgIndex] = useState(0);
     const [activeSection, setActiveSection] = useState('');
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [touchStart, setTouchStart] = useState<number | null>(null);
+    const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+    const minSwipeDistance = 50;
+
+    const onTouchStart = (e: React.TouchEvent) => {
+        setTouchEnd(null);
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const onTouchMove = (e: React.TouchEvent) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+        const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > minSwipeDistance;
+        const isRightSwipe = distance < -minSwipeDistance;
+        if (isLeftSwipe) {
+            setCurrentPotgIndex((prev) => (prev + 1) % PLAYERS_OF_THE_GAME.length);
+        }
+        if (isRightSwipe) {
+            setCurrentPotgIndex((prev) => (prev - 1 + PLAYERS_OF_THE_GAME.length) % PLAYERS_OF_THE_GAME.length);
+        }
+    };
 
     const activePotg = PLAYERS_OF_THE_GAME[currentPotgIndex];
 
@@ -249,7 +275,12 @@ export default function Page() {
                     {/* Side Column: Player Spotlight & Schedule */}
                     <div className="lg:col-span-5 flex flex-col gap-8">
                         {/* Player of the Game Card (Carousel) */}
-                        <article className="relative bg-primary text-on-primary rounded-xl overflow-hidden editorial-shadow group h-[380px] transition-all duration-500">
+                        <article 
+                            className="relative bg-primary text-on-primary rounded-xl overflow-hidden editorial-shadow group h-[380px] transition-all duration-500 touch-pan-y shadow-2xl"
+                            onTouchStart={onTouchStart}
+                            onTouchMove={onTouchMove}
+                            onTouchEnd={handleTouchEnd}
+                        >
                             {PLAYERS_OF_THE_GAME.map((potg, index) => (
                                 <div
                                     key={potg.id}
@@ -295,6 +326,23 @@ export default function Page() {
                                     </div>
                                 </div>
                             ))}
+
+                            {/* Hover Navigation Arrows (Desktop Only) */}
+                            <button 
+                                onClick={(e) => { e.stopPropagation(); setCurrentPotgIndex((prev) => (prev - 1 + PLAYERS_OF_THE_GAME.length) % PLAYERS_OF_THE_GAME.length); }} 
+                                className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-black/30 hover:bg-black/60 items-center justify-center text-white backdrop-blur-sm transition-all active:scale-95 border border-white/10 hidden md:flex opacity-0 group-hover:opacity-100 editorial-shadow hover:scale-110"
+                                aria-label="Previous Player"
+                            >
+                                <span className="material-symbols-outlined text-[22px]">chevron_left</span>
+                            </button>
+
+                            <button 
+                                onClick={(e) => { e.stopPropagation(); setCurrentPotgIndex((prev) => (prev + 1) % PLAYERS_OF_THE_GAME.length); }} 
+                                className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-black/30 hover:bg-black/60 items-center justify-center text-white backdrop-blur-sm transition-all active:scale-95 border border-white/10 hidden md:flex opacity-0 group-hover:opacity-100 editorial-shadow hover:scale-110"
+                                aria-label="Next Player"
+                            >
+                                <span className="material-symbols-outlined text-[22px]">chevron_right</span>
+                            </button>
 
                             {/* Carousel Indicators */}
                             <div className="absolute bottom-4 right-6 z-30 flex gap-2">
