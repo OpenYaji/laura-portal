@@ -275,7 +275,7 @@ export default function Page() {
                     {/* Side Column: Player Spotlight & Schedule */}
                     <div className="lg:col-span-5 flex flex-col gap-8">
                         {/* Player of the Game Card (Carousel) */}
-                        <article 
+                        <article
                             className="relative bg-primary text-on-primary rounded-xl overflow-hidden editorial-shadow group h-[380px] transition-all duration-500 touch-pan-y shadow-2xl"
                             onTouchStart={onTouchStart}
                             onTouchMove={onTouchMove}
@@ -328,16 +328,16 @@ export default function Page() {
                             ))}
 
                             {/* Hover Navigation Arrows (Desktop Only) */}
-                            <button 
-                                onClick={(e) => { e.stopPropagation(); setCurrentPotgIndex((prev) => (prev - 1 + PLAYERS_OF_THE_GAME.length) % PLAYERS_OF_THE_GAME.length); }} 
+                            <button
+                                onClick={(e) => { e.stopPropagation(); setCurrentPotgIndex((prev) => (prev - 1 + PLAYERS_OF_THE_GAME.length) % PLAYERS_OF_THE_GAME.length); }}
                                 className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-black/30 hover:bg-black/60 items-center justify-center text-white backdrop-blur-sm transition-all active:scale-95 border border-white/10 hidden md:flex opacity-0 group-hover:opacity-100 editorial-shadow hover:scale-110"
                                 aria-label="Previous Player"
                             >
                                 <span className="material-symbols-outlined text-[22px]">chevron_left</span>
                             </button>
 
-                            <button 
-                                onClick={(e) => { e.stopPropagation(); setCurrentPotgIndex((prev) => (prev + 1) % PLAYERS_OF_THE_GAME.length); }} 
+                            <button
+                                onClick={(e) => { e.stopPropagation(); setCurrentPotgIndex((prev) => (prev + 1) % PLAYERS_OF_THE_GAME.length); }}
                                 className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-black/30 hover:bg-black/60 items-center justify-center text-white backdrop-blur-sm transition-all active:scale-95 border border-white/10 hidden md:flex opacity-0 group-hover:opacity-100 editorial-shadow hover:scale-110"
                                 aria-label="Next Player"
                             >
@@ -426,34 +426,23 @@ export default function Page() {
                                 </a>
                             </div>
                         </article>
-                        {/* Card 2
-                        <article className="bg-surface-container-lowest rounded-xl overflow-hidden editorial-shadow group">
-                            <div className="h-64 overflow-hidden">
-                                <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="a multi-generational family having a picnic on a green lawn with a checkered blanket and picnic basket" src="/images/events.jpg" />
+
+                        {/* Card 2 */}
+                        <article className="bg-surface-container-lowest rounded-xl overflow-hidden editorial-shadow group flex flex-col">
+                            <div className="h-64 overflow-hidden relative">
+                                <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Tanduay 3x3 Opening" src="/news/opening.png" />
                             </div>
-                            <div className="p-8 border-t-4 border-primary-fixed">
+                            <div className="p-8 flex-1 flex flex-col border-t-4 border-primary-fixed">
                                 <span className="text-xs font-bold text-on-surface-variant/60 tracking-widest uppercase mb-2 block">Events</span>
-                                <h3 className="text-2xl font-headline font-bold text-primary mb-4 leading-tight">Annual Summer Picnic Details</h3>
-                                <p className="text-on-surface-variant mb-6">Join us next Saturday for food, music, and neighbors. Bring your favorite dish to share!</p>
-                                <a className="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#">
+                                <h3 className="text-2xl font-headline font-bold text-primary mb-4 leading-tight">Opening</h3>
+                                <p className="text-on-surface-variant mb-6 flex-1">Excited to share with everyone the successful opening of the 3x3 Tanduay Basketball League.</p>
+                                <a className="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all mt-auto w-max" href="https://www.facebook.com/photo?fbid=122098006544923782&set=a.122098006610923782" target="_blank" rel="noopener noreferrer">
                                     Read More <span className="material-symbols-outlined text-sm" data-icon="arrow_right_alt">arrow_right_alt</span>
                                 </a>
                             </div>
                         </article>
-                        {/* Card 3 */}
-                        {/* <article className="bg-surface-container-lowest rounded-xl overflow-hidden editorial-shadow group">
-                            <div className="h-64 overflow-hidden">
-                                <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="diverse group of volunteers wearing matching green t-shirts smiling while working in a neighborhood garden" src="/images/civic.jpg" />
-                            </div>
-                            <div className="p-8">
-                                <span className="text-xs font-bold text-on-surface-variant/60 tracking-widest uppercase mb-2 block">Civic</span>
-                                <h3 className="text-2xl font-headline font-bold text-primary mb-4 leading-tight">Volunteer Cleanup Day</h3>
-                                <p className="text-on-surface-variant mb-6">Let's keep Laura 2 beautiful. Sign up for our monthly street-wide cleanup initiative.</p>
-                                <a className="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#">
-                                    Read More <span className="material-symbols-outlined text-sm" data-icon="arrow_right_alt">arrow_right_alt</span>
-                                </a>
-                            </div>
-                        </article> */}
+
+
                     </div>
                 </div>
             </section>
@@ -464,7 +453,7 @@ export default function Page() {
                     <div className="relative">
                         <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary-fixed/20 rounded-full blur-3xl -z-10"></div>
                         <div className="bg-white p-4 rounded-xl editorial-shadow overflow-hidden">
-                            <a 
+                            <a
                                 href="https://www.google.com/maps/dir/14.6695388,121.0760531/14.6704188,121.0762316/@14.6699372,121.0737525,734m/data=!3m2!1e3!4b1!4m6!4m5!1m1!4e1!1m1!4e1!3e2?entry=ttu&g_ep=EgoyMDI2MDMyOS4wIKXMDSoASAFQAw%3D%3D"
                                 target="_blank"
                                 rel="noopener noreferrer"
