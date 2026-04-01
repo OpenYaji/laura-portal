@@ -292,7 +292,7 @@ export default function TournamentPage() {
                                 {selectedDivision} Division - Matchups
                             </h3>
 
-                            <div className="flex flex-col lg:flex-row gap-8 justify-center items-stretch w-full overflow-x-auto pb-8 pt-4">
+                            <div className="flex flex-col lg:flex-row gap-8 items-stretch w-full overflow-x-auto pb-8 pt-4">
                                 {generateRounds(currentTeams).map((round) => (
                                     <div key={round.round} className="flex-1 min-w-[300px] bg-surface-container-low rounded-xl p-6 relative pt-10 border border-emerald-900/5">
                                         <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white font-black text-sm uppercase tracking-[0.2em] px-6 py-2 rounded-full shadow-lg whitespace-nowrap">
@@ -339,11 +339,11 @@ export default function TournamentPage() {
                                         {/* Match 1 */}
                                         <div className="bg-white rounded-lg shadow-sm border border-emerald-900/10 p-4 relative z-10 editorial-shadow hover:border-primary/40 transition-all">
                                             <div className="flex justify-between items-center py-2 border-b border-surface-container">
-                                                <span className="font-bold text-emerald-950 truncate max-w-[80%]">{[...currentTeams].sort((a,b) => b.points - a.points)[0]?.name || 'TBD'}</span>
+                                                <span className="font-bold text-emerald-950 truncate max-w-[80%]">TBA</span>
                                                 <span className="text-[10px] font-black text-emerald-900/40 uppercase">#1</span>
                                             </div>
                                             <div className="flex justify-between items-center py-2">
-                                                <span className="font-bold text-emerald-950 truncate max-w-[80%]">{[...currentTeams].sort((a,b) => b.points - a.points)[3]?.name || 'TBD'}</span>
+                                                <span className="font-bold text-emerald-950 truncate max-w-[80%]">TBA</span>
                                                 <span className="text-[10px] font-black text-emerald-900/40 uppercase">#4</span>
                                             </div>
                                             {/* Connecting Line Right */}
@@ -353,11 +353,11 @@ export default function TournamentPage() {
                                         {/* Match 2 */}
                                         <div className="bg-white rounded-lg shadow-sm border border-emerald-900/10 p-4 relative z-10 editorial-shadow hover:border-primary/40 transition-all">
                                             <div className="flex justify-between items-center py-2 border-b border-surface-container">
-                                                <span className="font-bold text-emerald-950 truncate max-w-[80%]">{[...currentTeams].sort((a,b) => b.points - a.points)[1]?.name || 'TBD'}</span>
+                                                <span className="font-bold text-emerald-950 truncate max-w-[80%]">TBA</span>
                                                 <span className="text-[10px] font-black text-emerald-900/40 uppercase">#2</span>
                                             </div>
                                             <div className="flex justify-between items-center py-2">
-                                                <span className="font-bold text-emerald-950 truncate max-w-[80%]">{[...currentTeams].sort((a,b) => b.points - a.points)[2]?.name || 'TBD'}</span>
+                                                <span className="font-bold text-emerald-950 truncate max-w-[80%]">TBA</span>
                                                 <span className="text-[10px] font-black text-emerald-900/40 uppercase">#3</span>
                                             </div>
                                             {/* Connecting Line Right */}
