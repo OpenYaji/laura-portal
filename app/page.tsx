@@ -258,18 +258,17 @@ export default function Page() {
                                     <img alt={`${potg.name} Spotlight`} className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50 group-hover:scale-105 transition-transform duration-700" src={potg.image} />
                                     <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-primary/60 to-transparent"></div>
 
-                                    {/* Division & Date Tag - Upper Right */}
-                                    <div className="absolute top-6 right-6 z-20">
-                                        <span className="text-[10px] font-bold text-emerald-100/90 bg-black/40 px-3 py-1.5 rounded-full backdrop-blur-md uppercase tracking-wider editorial-shadow border border-white/10">
-                                            {potg.division} • {potg.date}
-                                        </span>
-                                    </div>
-
-                                    {/* Player of the Game Tag - Upper Left */}
-                                    <div className="absolute top-6 left-6 z-20">
-                                        <div className="inline-flex items-center gap-1.5 bg-[#FFD700] text-yellow-950 px-3 py-1.5 rounded-full text-[10px] font-black tracking-[0.1em] uppercase shadow-lg border border-yellow-200/50">
+                                    {/* Top Tags Container */}
+                                    <div className="absolute top-0 left-0 w-full p-4 sm:p-6 z-20 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                                        {/* Player of the Game Tag - Upper Left */}
+                                        <div className="inline-flex items-center gap-1.5 bg-[#FFD700] text-yellow-950 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full text-[9px] sm:text-[10px] font-black tracking-[0.1em] uppercase shadow-lg border border-yellow-200/50 shrink-0">
                                             <span className="material-symbols-outlined text-[14px]">social_leaderboard</span>
                                             Player of the Game
+                                        </div>
+
+                                        {/* Division & Date Tag - Upper Right */}
+                                        <div className="text-[9px] sm:text-[10px] font-bold text-emerald-100/90 bg-black/40 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full backdrop-blur-md uppercase tracking-wider editorial-shadow border border-white/10 sm:text-right shrink-0">
+                                            {potg.division} • {potg.date}
                                         </div>
                                     </div>
 
