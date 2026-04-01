@@ -4,105 +4,49 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import GetStartedModal from '../../components/modal/GetStartedModal';
 
-// Dummy Data
+// Actual Data from Standings
+const t_games = [{ id: 1, date: 'TBA', time: 'TBA', opp: 'TBA', loc: 'TBA' }];
+const t_roster = [{ id: 1, name: 'TBA', number: '00', pos: '-' }];
+
 const TOURNAMENT_DATA = {
     Midget: [
-        {
-            id: "m1", name: "Sige Po", wins: 4, losses: 0, points: 36,
-            roster: [
-                { id: 1, name: 'Angelito "Tisoy" Artiaga', number: '00', pos: 'PG' },
-                { id: 2, name: 'Carlos Santos', number: '12', pos: 'SG' },
-                { id: 3, name: 'Miguel Cruz', number: '24', pos: 'SF' },
-                { id: 4, name: 'Lester Bautista', number: '07', pos: 'PF' },
-                { id: 5, name: 'Julio De Leon', number: '15', pos: 'C' }
-            ],
-            games: [
-                { id: 1, date: 'TBA', time: 'TBA', opp: 'TBA', loc: 'TBA' },
-                { id: 2, date: 'TBA', time: 'TBA', opp: 'TBA', loc: 'TBA' }
-            ]
-        },
-        {
-            id: "m2", name: "Aggressive", wins: 3, losses: 1, points: 30,
-            roster: [
-                { id: 1, name: 'Mark Gomez', number: '03', pos: 'PG' },
-                { id: 2, name: 'Kobe Fernandez', number: '24', pos: 'SG' },
-                { id: 3, name: 'Andrei Lim', number: '10', pos: 'SF' },
-                { id: 4, name: 'Justin Reyes', number: '11', pos: 'PF' },
-                { id: 5, name: 'Vince Navarro', number: '33', pos: 'C' }
-            ],
-            games: [
-                { id: 1, date: 'TBA', time: 'TBA', opp: 'TBA', loc: 'TBA' },
-                { id: 2, date: 'TBA', time: 'TBA', opp: 'TBA', loc: 'TBA' }
-            ]
-        },
-        {
-            id: "m3", name: "Lakeview Falcons", wins: 2, losses: 2, points: 27,
-            roster: [
-                { id: 1, name: 'John Doe', number: '01', pos: 'PG' },
-                { id: 2, name: 'Ben Torres', number: '05', pos: 'SG' }
-            ],
-            games: [
-                { id: 1, date: 'TBA', time: 'TBA', opp: 'TBA', loc: 'TBA' }
-            ]
-        },
-        {
-            id: "m4", name: "Summit Oaks Wolves", wins: 1, losses: 3, points: 21,
-            roster: [
-                { id: 1, name: 'Paolo Yap', number: '88', pos: 'SF' },
-                { id: 2, name: 'Ken Chan', number: '30', pos: 'C' }
-            ],
-            games: [
-                { id: 1, date: 'TBA', time: 'TBA', opp: 'TBA', loc: 'TBA' }
-            ]
-        }
+        { id: "m1", name: "Sige Po", wins: 4, losses: 0, points: 8, roster: t_roster, games: t_games },
+        { id: "m2", name: "Aggressive", wins: 3, losses: 1, points: 7, roster: t_roster, games: t_games },
+        { id: "m3", name: "Samonte", wins: 3, losses: 1, points: 7, roster: t_roster, games: t_games },
+        { id: "m4", name: "Don Matias", wins: 2, losses: 2, points: 6, roster: t_roster, games: t_games },
+        { id: "m5", name: "G Time", wins: 1, losses: 3, points: 5, roster: t_roster, games: t_games },
+        { id: "m6", name: "NSG", wins: 1, losses: 1, points: 3, roster: t_roster, games: t_games },
+        { id: "m7", name: "Pudtrip Gang", wins: 0, losses: 4, points: 4, roster: t_roster, games: t_games },
+        { id: "m8", name: "Slurpees", wins: 0, losses: 2, points: 2, roster: t_roster, games: t_games },
     ],
     Junior: [
-        {
-            id: "j1", name: "Barangay Uno", wins: 5, losses: 0, points: 40,
-            roster: [{ id: 1, name: 'Leon Ramos', number: '11', pos: 'PG' }, { id: 2, name: 'Miko Tan', number: '02', pos: 'SG' }],
-            games: [{ id: 1, date: 'TBA', time: 'TBA', opp: 'TBA', loc: 'TBA' }]
-        },
-        {
-            id: "j2", name: "Street Hounds", wins: 3, losses: 2, points: 32,
-            roster: [{ id: 1, name: 'Chris Pineda', number: '07', pos: 'SF' }],
-            games: [{ id: 1, date: 'TBA', time: 'TBA', opp: 'TBA', loc: 'TBA' }]
-        },
-        {
-            id: "j3", name: "Hoopers Club", wins: 1, losses: 4, points: 20,
-            roster: [{ id: 1, name: 'Jett Manalo', number: '99', pos: 'C' }],
-            games: [{ id: 1, date: 'TBA', time: 'TBA', opp: 'TBA', loc: 'TBA' }]
-        },
-        {
-            id: "j4", name: "Eastside Ballers", wins: 0, losses: 5, points: 10,
-            roster: [{ id: 1, name: 'Sammy Cruz', number: '15', pos: 'PF' }],
-            games: [{ id: 1, date: 'TBA', time: 'TBA', opp: 'TBA', loc: 'TBA' }]
-        }
+        { id: "j1", name: "Boss M.", wins: 3, losses: 0, points: 6, roster: t_roster, games: t_games },
+        { id: "j2", name: "Buzzoink", wins: 3, losses: 1, points: 7, roster: t_roster, games: t_games },
+        { id: "j3", name: "T. Rumble", wins: 2, losses: 2, points: 6, roster: t_roster, games: t_games },
+        { id: "j4", name: "Laura St.", wins: 1, losses: 0, points: 2, roster: t_roster, games: t_games },
+        { id: "j5", name: "Kupas Nga", wins: 1, losses: 2, points: 4, roster: t_roster, games: t_games },
+        { id: "j6", name: "Samarpa", wins: 0, losses: 2, points: 2, roster: t_roster, games: t_games },
+        { id: "j7", name: "Balakajan", wins: 0, losses: 3, points: 3, roster: t_roster, games: t_games },
     ],
-    Mosquito: [
-        {
-            id: "ms1", name: "Little Giants", wins: 2, losses: 0, points: 18,
-            roster: [{ id: 1, name: 'Totoy Bibo', number: '01', pos: 'PG' }],
-            games: [{ id: 1, date: 'TBA', time: 'TBA', opp: 'TBA', loc: 'TBA' }]
-        },
-        {
-            id: "ms2", name: "Mini Ninjas", wins: 1, losses: 1, points: 12,
-            roster: [{ id: 1, name: 'Dingdong Dantes', number: '05', pos: 'SG' }],
-            games: [{ id: 1, date: 'TBA', time: 'TBA', opp: 'TBA', loc: 'TBA' }]
-        },
-        {
-            id: "ms3", name: "Star Kids", wins: 0, losses: 2, points: 6,
-            roster: [{ id: 1, name: 'Joshua Garcia', number: '23', pos: 'SF' }],
-            games: [{ id: 1, date: 'TBA', time: 'TBA', opp: 'TBA', loc: 'TBA' }]
-        },
-        {
-            id: "ms4", name: "Junior Cavs", wins: 1, losses: 1, points: 15,
-            roster: [{ id: 1, name: 'Lebron Jr.', number: '06', pos: 'C' }],
-            games: [{ id: 1, date: 'TBA', time: 'TBA', opp: 'TBA', loc: 'TBA' }]
-        }
+    'Kids A': [
+        { id: "ka1", name: "Sige Lang", wins: 4, losses: 1, points: 9, roster: t_roster, games: t_games },
+        { id: "ka2", name: "VHL", wins: 2, losses: 1, points: 5, roster: t_roster, games: t_games },
+        { id: "ka3", name: "Dedmaboiz", wins: 2, losses: 1, points: 5, roster: t_roster, games: t_games },
+        { id: "ka4", name: "NSG", wins: 1, losses: 1, points: 3, roster: t_roster, games: t_games },
+        { id: "ka5", name: "Escoda Boys", wins: 0, losses: 3, points: 3, roster: t_roster, games: t_games },
+        { id: "ka6", name: "1103", wins: 0, losses: 4, points: 4, roster: t_roster, games: t_games },
+    ],
+    'Kids B': [
+        { id: "kb1", name: "Denim T.", wins: 4, losses: 0, points: 8, roster: t_roster, games: t_games },
+        { id: "kb2", name: "R Hoops", wins: 3, losses: 2, points: 8, roster: t_roster, games: t_games },
+        { id: "kb3", name: "Kupas Nga", wins: 3, losses: 2, points: 8, roster: t_roster, games: t_games },
+        { id: "kb4", name: "Laura", wins: 2, losses: 1, points: 5, roster: t_roster, games: t_games },
+        { id: "kb5", name: "Bethel", wins: 1, losses: 3, points: 5, roster: t_roster, games: t_games },
+        { id: "kb6", name: "RND", wins: 0, losses: 5, points: 5, roster: t_roster, games: t_games },
     ]
 };
 
-type DivisionType = 'Midget' | 'Junior' | 'Mosquito';
+type DivisionType = 'Midget' | 'Junior' | 'Kids A' | 'Kids B';
 
 export default function TournamentPage() {
     const [selectedDivision, setSelectedDivision] = useState<DivisionType>('Midget');
@@ -189,7 +133,7 @@ export default function TournamentPage() {
                 {/* Division Tabs & Actions */}
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-12">
                     <div className="flex flex-wrap gap-3">
-                        {(['Midget', 'Junior', 'Mosquito'] as DivisionType[]).map((div) => (
+                        {(['Midget', 'Junior', 'Kids A', 'Kids B'] as DivisionType[]).map((div) => (
                             <button
                                 key={div}
                                 onClick={() => handleDivisionChange(div)}

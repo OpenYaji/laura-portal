@@ -202,7 +202,7 @@ export default function Page() {
                     <div className="lg:col-span-7 bg-surface-container-lowest rounded-xl editorial-shadow overflow-hidden border-t-4 border-primary-fixed">
                         <div className="p-8 pb-4">
                             <h3 className="text-2xl font-headline font-bold text-primary tracking-tight">Tournament Standings</h3>
-                            <p className="text-on-surface-variant text-sm mt-1">Divisions: <span className="font-bold text-emerald-800">Midget</span> • Junior • Mosquito</p>
+                            <p className="text-on-surface-variant text-sm mt-1">Divisions: <span className="font-bold text-emerald-800">Midget</span> • Junior • Kids A • Kids B</p>
                         </div>
                         <div className="overflow-x-auto">
                             <table className="w-full text-left border-collapse">
@@ -219,25 +219,25 @@ export default function Page() {
                                         <td className="py-5 px-8 font-bold text-emerald-900">Sige Po</td>
                                         <td className="py-5 px-6 text-center font-medium">4</td>
                                         <td className="py-5 px-6 text-center font-medium">0</td>
-                                        <td className="py-5 px-8 text-right font-black text-primary text-lg">36</td>
+                                        <td className="py-5 px-8 text-right font-black text-primary text-lg">8</td>
                                     </tr>
                                     <tr className="bg-surface-container-low/30 hover:bg-surface-container-low transition-colors">
                                         <td className="py-5 px-8 font-bold text-emerald-900">Aggressive</td>
-                                        <td className="py-5 px-6 text-center font-medium">10</td>
-                                        <td className="py-5 px-6 text-center font-medium">4</td>
-                                        <td className="py-5 px-8 text-right font-black text-primary text-lg">30</td>
+                                        <td className="py-5 px-6 text-center font-medium">3</td>
+                                        <td className="py-5 px-6 text-center font-medium">1</td>
+                                        <td className="py-5 px-8 text-right font-black text-primary text-lg">7</td>
                                     </tr>
                                     <tr className="hover:bg-surface-container-low transition-colors">
-                                        <td className="py-5 px-8 font-bold text-emerald-900">Lakeview Falcons</td>
-                                        <td className="py-5 px-6 text-center font-medium">9</td>
-                                        <td className="py-5 px-6 text-center font-medium">5</td>
-                                        <td className="py-5 px-8 text-right font-black text-primary text-lg">27</td>
+                                        <td className="py-5 px-8 font-bold text-emerald-900">Samonte</td>
+                                        <td className="py-5 px-6 text-center font-medium">3</td>
+                                        <td className="py-5 px-6 text-center font-medium">1</td>
+                                        <td className="py-5 px-8 text-right font-black text-primary text-lg">7</td>
                                     </tr>
                                     <tr className="bg-surface-container-low/30 hover:bg-surface-container-low transition-colors">
-                                        <td className="py-5 px-8 font-bold text-emerald-900">Summit Oaks Wolves</td>
-                                        <td className="py-5 px-6 text-center font-medium">7</td>
-                                        <td className="py-5 px-6 text-center font-medium">7</td>
-                                        <td className="py-5 px-8 text-right font-black text-primary text-lg">21</td>
+                                        <td className="py-5 px-8 font-bold text-emerald-900">Don Matias</td>
+                                        <td className="py-5 px-6 text-center font-medium">2</td>
+                                        <td className="py-5 px-6 text-center font-medium">2</td>
+                                        <td className="py-5 px-8 text-right font-black text-primary text-lg">6</td>
                                     </tr>
                                 </tbody>
                             </table>
